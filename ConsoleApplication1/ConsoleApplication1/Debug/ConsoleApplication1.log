@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\Artem\source\repos\ConsoleApplication1\ConsoleApplication1\Source.c(9,1): warning C4305: инициализация: усечение из "double" в "float"
+  ConsoleApplication1.vcxproj -> C:\Users\Artem\source\repos\ConsoleApplication1\Debug\ConsoleApplication1.exe
