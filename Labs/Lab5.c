@@ -9,8 +9,8 @@ float rast(float x1, float x2) {
         x = fabsf(x);
     }
     return x;
-    }
-float dlin(float A1, float A2){
+}
+float dlin(float A1, float A2) {
     float AC = A2 - A1;
     if (AC < 0) {
         AC = fabsf(AC);
@@ -20,6 +20,13 @@ float dlin(float A1, float A2){
 int main()
 {
     setlocale(LC_ALL, "Rus");
+    printf("Программа умеет:\n");
+    printf("1.Нахожение растояния между двумя точками по кординатам.\n");
+    printf("2.Нахождение длинн отрезков AC и BC на числовой прямой.\n");
+    printf("3.Нахождение произведения отрезков AC и BC на числовой прямой.(C находится между A и B)\n");
+    printf("4.Нахождение периметра и площади прямоугольника по кординатам вершин.\n");
+    printf("5.Нахождение периметра и площади треугольника по кординатам вершин.\n");
+    printf("Введите номер задания:");
     int Q = 0;
     scanf("%d", &Q);
     if (Q == 1) {
@@ -46,7 +53,7 @@ int main()
         float BC = dlin(B, C);
         printf("BC=%f\n", BC);
         float Sum = BC + AC;
-        printf("%f", Sum);
+        printf("AC + BC = %f", Sum);
     }
     if (Q == 3) {
         float A = 0, B = 0, C = 0;
@@ -59,7 +66,7 @@ int main()
         float AC = dlin(A, C);
         float BC = dlin(A, B);
         float S2 = AC * BC;
-        printf("%f", S2);
+        printf("AC * BC = %f", S2);
     }
     if (Q == 4) {
         float x1 = 0, x2 = 0, y1 = 0, y2 = 0;
@@ -71,11 +78,11 @@ int main()
         float y = rast(y1, y2);
         float P = 2 * x + 2 * y;
         float S = x * y;
-        printf("Периметр: %f", P);
+        printf("Периметр: %f\n", P);
         printf("Площадь: %f", S);
     }
     if (Q == 5) {
-        float x1 = 0, x2 = 0, y1 = 0, y2 = 0, x3 = 0,y3 = 0;
+        float x1 = 0, x2 = 0, y1 = 0, y2 = 0, x3 = 0, y3 = 0;
         printf("Введите кординаты первой точки:");
         scanf("%f %f", &x1, &y1);
         printf("Введите кординаты второй точки:");
@@ -93,8 +100,8 @@ int main()
         float c = sqrt(y * y + x * x);
         float p = a + b + c;
         float S = sqrt(p / 2 * (p / 2 - a) * (p / 2 - b) * (p / 2 - c));
-        printf("%f\n", p);
-        printf("%f", S);
+        printf("Периметр =%f\n", p);
+        printf("Площадь = %f", S);
     }
     return 0;
 }
