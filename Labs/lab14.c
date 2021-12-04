@@ -14,8 +14,7 @@ int main()
             int A = 0, B = 0, j = 0;
             printf("\nВведите числа A и B:");
             scanf("%d %d",&A, &B);
-            A++;
-            while(A!=B){
+            while(A<=B){
                 j = 0;
                 while(j!=A){
                     printf("%d", A);
